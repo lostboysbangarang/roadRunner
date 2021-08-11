@@ -1,0 +1,24 @@
+$AzBlueI: #0066c1;
+$darken: rgba(0, 0, 0, 0.5);
+body {
+    background-color: $AzBlueI;
+    // background: linear-gradient($darken, $darken),$AzBlueI;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+    
+}
+.darken {
+    background-color: $darken;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+}

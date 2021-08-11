@@ -1,0 +1,23 @@
+body {
+  background-color: #0066c1;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.darken {
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */
