@@ -1,3 +1,11 @@
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(3600deg);
+  }
+}
 body {
   background-color: #0066c1;
   overflow-x: hidden;
