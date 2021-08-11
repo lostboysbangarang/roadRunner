@@ -20,4 +20,42 @@ body {
   min-height: 100vh;
 }
 
+.rollOut {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.rollOut_van {
+  width: 75%;
+  position: relative;
+  top: 25%;
+  left: 10%;
+  z-index: 5;
+}
+.rollOut_van img {
+  width: 100%;
+}
+.rollOut_wheel_1 {
+  width: 8%;
+  position: relative;
+  left: 74.7%;
+  top: 10%;
+  z-index: 0;
+}
+.rollOut_wheel_1 img {
+  width: 100%;
+}
+.rollOut_wheel_2 {
+  width: 8%;
+  position: relative;
+  left: 24.5%;
+  top: -2%;
+  z-index: 0;
+}
+.rollOut_wheel_2 img {
+  width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */
