@@ -1,4 +1,12 @@
 $AzBlueI: #0066c1;
+$AzBlueII: #146eb4;
+
+$buttonI: #ff9900;
+$buttonII: #146eb4;
+$buttonIII: #232f3e;
+$buttonIV: #91641F;
+$buttonV: #ff3860;
+
 $darken: rgba(0, 0, 0, 0.5);
 @keyframes roll {
     0% {
@@ -8,22 +16,30 @@ $darken: rgba(0, 0, 0, 0.5);
     }
     
 }
+@keyframes drive {
+    0% {
+        transform: translate(0vw, 0vw);
+    }
+    100% {
+        transform: translate(100vw, 0vw);
+    }
+}
 body {
-    background-color: $AzBlueI;
-    // background: linear-gradient($darken, $darken),$AzBlueI;
+    background-color: $AzBlueII;
     overflow-x: hidden;
     position: absolute;
     top: 0;
     left: 0;
     margin: 0;
+    padding: 0;
     width: 100vw;
     min-height: 100vh;
     
 }
 .darken {
-    background-color: $darken;
     overflow-x: hidden;
     position: absolute;
+    background-color: $darken;
     top: 0;
     left: 0;
     margin: 0;
@@ -34,32 +50,42 @@ body {
     position: relative;
     top: 0;
     left: 0;
-    // background-color: red;
     width: 100vw;
     height: 100vh;
-    // object-fit: cover;
     &_van {
         width: 75%;
         position: relative;
-        // object-fit: cover;
         top: 25%;
         left: 10%;
-        z-index: 5;
-        & img {
-            
+        display: flex;
+        flex-direction: column;
+        & img {            
             width: 100%;
-            // object-fit: cover;
-            // width: ;
+        }
+        & .wheels {
+            position: relative;
+            width: 78%;
+            left: 12%;
+            margin-top: -9%;
+            height: fit-content;
+            display: flex;
+            justify-content: space-between;
+            & img {
+                width: 15%;
+            }
+            & .wheel0 {
+                position: relative;
+                z-index: -1;
+            }
         }
     }
     &_wheel {
         &_1 {
             width: 8%;
             position: relative;
-            left: 74.7%;
-            top: 10%;
-            z-index: 0;
-            // animation: roll 10000ms none forwards;
+            left: 69%;
+            top: 12%;
+            z-index: 2;
             & img {
                 width: 100%;
             }
@@ -67,11 +93,91 @@ body {
         &_2 {
             width: 8%;
             position: relative;
-            left: 24.5%;
-            top: -2%;
+            left: 19.5%;
+            top: -3.5%;
             z-index: 0;
             & img {
                 width: 100%;
+            }
+        }
+    }
+}
+
+.afterContainer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    // background-color: white;
+    & .header {
+        position: relative;
+        height: 7vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // background-color: white;
+        & .logo {
+            height: 100%;
+            margin-left: 2vw;
+            & img {
+                height: 100%;
+            }
+        }
+        & .buttons {
+            margin-right: 2vw;
+            & button {
+                width: fit-content;
+                padding: 1.25em 2em;
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+                outline: none;
+                border: 0;
+                background: $buttonI;
+                color: whitesmoke;
+                vertical-align: middle;
+                text-decoration: none;
+                border-radius: .75em;
+                &.butt {
+                    line-height: 1.5;
+                    border: 2px solid $buttonIV;
+                    transform-style: preserve-3d;
+                    transition: transform 150ms cubic-bezier(0, 0, .58, 1), background 150ms cubic-bezier(0, 0, .58, 1);
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: $buttonIV;
+                        border-radius: inherit;
+                        box-shadow: 0 0 0 2px $buttonIV, 0 .625em 0 0 $buttonIII;
+                        transform: translate3d(0, .75em, -1em);
+                    }
+                    &:hover {
+                        // background: $buttonII;
+                        transform: translate(0em, .25em);
+                        &::before {
+                            box-shadow: 0 0 0 2px $buttonIV, 0 .5em 0 0 $buttonIII;
+                            transform: translate3d(0, 0.5em, -2em);
+                        }
+                    }
+                    &:active {
+                        // background: $buttonII;
+                        transform: translate(0em, 0.75em);
+                        &::before {
+                        box-shadow: 0 0 0 2px $buttonIV, 0 .25em 0 0 $buttonIII;
+                        transform: translate3d(0, 0.25em, -1em);
+                        
+                        }
+                    }
+                }
             }
         }
     }
