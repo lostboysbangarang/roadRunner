@@ -14,7 +14,7 @@
                 <img src="./resources/logo.webp" alt="">
             </div>
             <nav class="buttons">
-                <button class="butt applyNow" onclick="location.href=location.origin+'/apply.html'">Apply Now</button>
+                <button class="butt applyNow" onclick="location.pathname='apply.html'">Apply Now</button>
                 <button class="butt activities">Community Activites</button>
                 <button class="butt socials">Social Media</button>
                 <button class="butt contact">Contact Us</button>
@@ -73,48 +73,59 @@
         </section>
         <form class="job_applyField">
             <div class="name">
-                <label for="first">Name:</label>
-                <input type="text" name="first" placeholder="First" class="first">
-                <input type="text" name="last" placeholder="Last" class="last">
+                <label for="first">Tell us your name</label>
+                <div class="wrapper">
+                    <input type="text" name="first" placeholder="First" class="first">
+                    <input type="text" name="last" placeholder="Last" class="last">
+                </div>
+                
             </div>
             <div class="email">
                 <label for="email">Email:</label>
-                <input type="text" name="last" placeholder="Email" class="email">
+                <input type="text" name="last" placeholder="Email" class="emailInput">
             </div>
             <div class="phone">
                 <label for="number">Phone N°:</label>
-                <input type="tel" name="number" placeholder="(512)555-0123" class="number">
+                <input type="tel" name="number" placeholder="(512)555-0123" class="numberInput">
             </div>
             <div class="address">
-                <label for="address">Address:</label>
-                <input type="text" name="address" placeholder="Address" class="address">
+                <label for="address">Home Address:</label>
+                <div class="wrapper">
+                    <input type="text" name="address" placeholder="Street Address" class="addressInput">
+                    <input type="text" name="address" placeholder="Apt or Bld N°" class="aptInput">
+                    <div class="wrapperII">
+                        <input type="text" name="address" placeholder="City" class="cityInput">
+                        <input type="text" name="address" placeholder="State" class="stateInput">
+                        <input type="number" name="address" placeholder="Zip Code" class="zipInput">
+                    </div>
+                </div>
             </div>
-            <div class="age">
+            <!-- <div class="age">
                 <label for="21min">Are you at least 21 years of age?</label>
                 <input type="radio" name="21min" class="yes">
                 <input type="radio" name="21min" class="no">
-            </div>
-            <div class="drugs">
+            </div> -->
+            <!-- <div class="drugs">
                 <label for="drugz">Do you submit to a drug screening?</label>
                 <input type="radio" name="drugz" class="yes">
                 <input type="radio" name="drugz" class="no">
-            </div>
-            <div class="workStatus">
+            </div> -->
+            <!-- <div class="workStatus">
                 <label for="usStat">Are you permitted to work in the U.S?</label>
                 <input type="radio" name="usStat" class="yes">
                 <input type="radio" name="usStat" class="no">
-            </div>
-            <div class="english">
+            </div> -->
+            <!-- <div class="english">
                 <label for="eng">Can you speek and read English?</label>
                 <input type="radio" name="eng" class="yes">
                 <input type="radio" name="eng" class="no">
-            </div>
-            <div class="felony">
+            </div> -->
+            <!-- <div class="felony">
                 <label for="felony">Have you ever been convicted of a felony?</label>
                 <input type="radio" name="felony" class="yes">
                 <input type="radio" name="felony" class="no">
-            </div>
-            <div class="availability">
+            </div> -->
+            <!-- <div class="availability">
                 <label for="fullOrPart">Availability</label>
                 <select name="fullOrPart" class="fullpart">
                     <option value="default" class="def">Select an option</option>
@@ -137,8 +148,8 @@
                 <input type="checkbox" name="sun" value="Monday" class="mon">
                 <label for="startDate">Desired Start Date</label>
                 <input type="date" name="startDate" class="startDate">
-            </div>
-            <div class="experience">
+            </div> -->
+            <!-- <div class="experience">
                 <label for="deliveryExp">Do you have delivery experience?</label>
                 <input type="radio" name="deliveryExp" class="yes">
                 <input type="radio" name="deliveryExp" class="no">
@@ -155,8 +166,8 @@
                 <input type="text" name="city" class="city">
                 <label for="state">State where DSP was located:</label>
                 <input type="text" name="state" class="state">
-            </div>
-            <div class="reference">
+            </div> -->
+            <!-- <div class="reference">
                 <label for="hearBoutUs">How did you hear about us?</label>
                 <input type="text" name="hearBoutUs" class="hearBoutUs">
                 <label for="firstRef">Professional References:</label>
@@ -169,9 +180,18 @@
                 <input type="text" name="firstRef2" placeholder="Frist" class="firstRef2">
                 <input type="text" name="lastRef2" placeholder="Last" class="lastRef2">
                 <input type="tel" name="telRef2" placeholder="(512)555-0123" class="telRef2">
-            </div>
+            </div> -->
             <div class="resume"></div>
         </form>
     </div>
 </body>
+<script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <script src="./js/apply.js"></script>
+<script
+    src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+    integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+    crossorigin="anonymous"></script>
 </html>

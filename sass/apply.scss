@@ -6,7 +6,8 @@ $buttonII: #146eb4;
 $buttonIII: #232f3e;
 $buttonIV: #91641F;
 $buttonV: #ff3860;
-
+$darken: rgba(0, 0, 0, .25);
+@use "sass:math";
 @font-face {
     font-family: 'doves';
     src: url('../css/fonts/doves_type_2.0-webfont.eot');
@@ -18,6 +19,28 @@ $buttonV: #ff3860;
     font-weight: normal;
     font-style: normal;
 
+}
+
+
+@mixin fillOut {
+    display: flex;
+    flex-direction: column;
+    line-height: .7em;
+    width: 100% - (math.div(100%, 9.5) * 2);
+    position: relative;
+    left: math.div(100%, 9.5);
+    border: 1px solid $buttonIII;
+    margin-bottom: .5vh;
+    background-color: $darken;
+    & label {
+        position: relative;
+        border: 0px solid $buttonIII;
+        
+        height: 1em;
+        line-height: 1em;
+        vertical-align: center;
+        // box-shadow: none;
+    }
 }
 
 
@@ -194,7 +217,101 @@ body {
         } 
     }
     &_applyField {
-        background: red;
-        margin-top: 2em;
+        // background: red;
+        color: whitesmoke;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        display: flex;
+        width: 48vw;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1.75em;
+        // font-weight: 100;
+        flex-wrap: wrap;
+        & input[type=text], input[type=number], input[type=tel] {
+            height: 2em;
+        }
+        & input {
+            background-color: transparent;
+            &::placeholder {
+                font-size: 1.5em;
+            }
+        }
+        & .name {
+            // display: flex;
+            // flex-direction: column;
+            // line-height: .7em;
+            // width: 100% - (math.div(100%, 9.5) * 2);
+            // position: relative;
+            // left: math.div(100%, 9.5);
+            // border: .5px solid $buttonIII;
+            // & label {
+            //     position: relative;
+            //     border: 1px solid $buttonIII;
+            //     background-color: $darken;
+            //     height: 1em;
+            //     line-height: 1em;
+            //     vertical-align: center;
+            // }
+            @include fillOut;
+            & .wrapper {
+                // background: blue;
+                display: flex;
+                justify-content: space-evenly;
+                & input {
+                    width: 50%;
+                    border: 1px solid $buttonIII;
+                }
+            }
+        }
+        & .email {
+            @include fillOut;
+        }
+        & .phone {
+            border: 1px solid $buttonIII;
+            display: flex;
+            // flex-direction: column;
+            line-height: .7em;
+            width: 100% - (math.div(100%, 9.5) * 2);
+            left: math.div(100%, 9.5);
+            position: relative;
+            background-color: $darken;
+            height: 1em;
+            margin-bottom: .5vh;
+            & label {
+                line-height: 1em;
+                // vertical-align: center;
+            }
+            & input {
+                width: 50%;
+                position: relative;
+                left: 15%;
+                background-color: transparent;
+            }
+        }
+        & .address {
+            border: 1px solid $buttonIII;
+            display: flex;
+            flex-direction: column;
+            // line-height: .7em;
+            width: 100% - (math.div(100%, 9.5) * 2);
+            left: math.div(100%, 9.5);
+            position: relative;
+            background-color: $darken;
+            height: 1em;
+            & .wrapper {
+                background-color: $darken;
+                display: flex;
+                flex-direction: column;
+                &II {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    & input {
+                        width: 40%;
+                    }
+                }
+            }
+        }
     }
 }

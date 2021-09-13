@@ -165,8 +165,111 @@ body {
   margin-top: 1.5em;
 }
 .job_applyField {
-  background: red;
-  margin-top: 2em;
+  color: whitesmoke;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  width: 48vw;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.75em;
+  flex-wrap: wrap;
+}
+.job_applyField input[type=text], .job_applyField input[type=number], .job_applyField input[type=tel] {
+  height: 2em;
+}
+.job_applyField input {
+  background-color: transparent;
+}
+.job_applyField input::placeholder {
+  font-size: 1.5em;
+}
+.job_applyField .name {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.7em;
+  width: 78.9473684211%;
+  position: relative;
+  left: 10.5263157895%;
+  border: 1px solid #232f3e;
+  margin-bottom: 0.5vh;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.job_applyField .name label {
+  position: relative;
+  border: 0px solid #232f3e;
+  height: 1em;
+  line-height: 1em;
+  vertical-align: center;
+}
+.job_applyField .name .wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+.job_applyField .name .wrapper input {
+  width: 50%;
+  border: 1px solid #232f3e;
+}
+.job_applyField .email {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.7em;
+  width: 78.9473684211%;
+  position: relative;
+  left: 10.5263157895%;
+  border: 1px solid #232f3e;
+  margin-bottom: 0.5vh;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.job_applyField .email label {
+  position: relative;
+  border: 0px solid #232f3e;
+  height: 1em;
+  line-height: 1em;
+  vertical-align: center;
+}
+.job_applyField .phone {
+  border: 1px solid #232f3e;
+  display: flex;
+  line-height: 0.7em;
+  width: 78.9473684211%;
+  left: 10.5263157895%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 1em;
+  margin-bottom: 0.5vh;
+}
+.job_applyField .phone label {
+  line-height: 1em;
+}
+.job_applyField .phone input {
+  width: 50%;
+  position: relative;
+  left: 15%;
+  background-color: transparent;
+}
+.job_applyField .address {
+  border: 1px solid #232f3e;
+  display: flex;
+  flex-direction: column;
+  width: 78.9473684211%;
+  left: 10.5263157895%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 1em;
+}
+.job_applyField .address .wrapper {
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+.job_applyField .address .wrapperII {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.job_applyField .address .wrapperII input {
+  width: 40%;
 }
 
 /*# sourceMappingURL=apply.css.map */
