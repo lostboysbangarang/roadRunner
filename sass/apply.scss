@@ -7,9 +7,6 @@ $buttonIII: #232f3e;
 $buttonIV: #91641F;
 $buttonV: #ff3860;
 
-$darken: rgba(0, 0, 0, 0.5);
-
-
 @font-face {
     font-family: 'doves';
     src: url('../css/fonts/doves_type_2.0-webfont.eot');
@@ -29,106 +26,24 @@ $darken: rgba(0, 0, 0, 0.5);
 }
 
 
-
-@keyframes roll {
-    0% {
-        transform: rotate(0deg);
-    } 100% {
-        transform: rotate(3600deg);
-    }
-    
-}
-@keyframes drive {
-    0% {
-        transform: translate(0vw, 0vw);
-    }
-    100% {
-        transform: translate(100vw, 0vw);
-    }
-}
 body {
     background-color: $AzBlueII;
     overflow-x: hidden;
     position: absolute;
+    font-family: "doves";
     top: 0;
     left: 0;
     margin: 0;
     padding: 0;
     width: 100vw;
     min-height: 100vh;
+    // font-size: 1.25em;
     
 }
-.darken {
-    overflow-x: hidden;
-    position: absolute;
-    background-color: $darken;
-    top: 0;
-    left: 0;
-    margin: 0;
-    width: 100vw;
-    min-height: 100vh;
-}
-.rollOut {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    &_van {
-        width: 75%;
-        position: relative;
-        top: 25%;
-        left: 10%;
-        display: flex;
-        flex-direction: column;
-        & img {            
-            width: 100%;
-        }
-        & .wheels {
-            position: relative;
-            width: 78%;
-            left: 12%;
-            margin-top: -9%;
-            height: fit-content;
-            display: flex;
-            justify-content: space-between;
-            & img {
-                width: 15%;
-            }
-            & .wheel0 {
-                position: relative;
-                z-index: -1;
-            }
-        }
-    }
-    &_wheel {
-        &_1 {
-            width: 8%;
-            position: relative;
-            left: 69%;
-            top: 12%;
-            z-index: 2;
-            & img {
-                width: 100%;
-            }
-        }
-        &_2 {
-            width: 8%;
-            position: relative;
-            left: 19.5%;
-            top: -3.5%;
-            z-index: 0;
-            & img {
-                width: 100%;
-            }
-        }
-    }
-}
-
 .afterContainer {
-    position: absolute;
+    position: relative;
     width: 100vw;
-    height: 100vh;
+    // height: 100vh;
     top: 0;
     left: 0;
     display: flex;
@@ -203,5 +118,83 @@ body {
                 }
             }
         }
+    }
+}
+.job {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    margin-top: 3vh;
+    display: flex;
+    &_description {
+        margin: 2em;
+        width: fit-content;
+        background: purple;
+        & h1 {
+            text-transform: uppercase;
+        }
+        & h1, h2, h3 {
+            line-height: 1em;
+            margin: 0;
+            padding: 0;
+            // color: white
+        }
+        & .intro {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.25em;
+            width: fit-content;
+            & .topContainer {
+                display: flex;
+                & .description {
+                    // font-size: 1.25em;
+                    margin-left: 3vw;
+                    width: 25vw;
+                    & h2 {
+                        width: 30vw;
+                    }
+                }
+            }
+            & h4 {
+                line-height: 1em;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+            & .topMiddle {
+                margin-top: 5vh;
+                & .duties {
+                    // line-height: .25em;
+                    list-style: none;
+                    // text-align: center;
+                    // vertical-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    & li {
+                        margin-top: -.5em;
+                    }
+                    & span {
+                        font-size: 2em;
+                        line-height: 1em;
+                    }
+                    & .dutiesSublist {
+                        list-style: none;
+                    }
+                }
+            }
+            & .bottom {
+                & p {
+                    line-height: .1em;
+                }
+                & .caps {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    margin-top: 1.5em;
+                }
+            }
+        } 
+    }
+    &_applyField {
+        background: red;
+        margin-top: 2em;
     }
 }

@@ -9,26 +9,11 @@
   font-family: "doves";
 }
 
-@keyframes roll {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(3600deg);
-  }
-}
-@keyframes drive {
-  0% {
-    transform: translate(0vw, 0vw);
-  }
-  100% {
-    transform: translate(100vw, 0vw);
-  }
-}
 body {
   background-color: #146eb4;
   overflow-x: hidden;
   position: absolute;
+  font-family: "doves";
   top: 0;
   left: 0;
   margin: 0;
@@ -37,76 +22,9 @@ body {
   min-height: 100vh;
 }
 
-.darken {
-  overflow-x: hidden;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-  margin: 0;
-  width: 100vw;
-  min-height: 100vh;
-}
-
-.rollOut {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
-.rollOut_van {
-  width: 75%;
-  position: relative;
-  top: 25%;
-  left: 10%;
-  display: flex;
-  flex-direction: column;
-}
-.rollOut_van img {
-  width: 100%;
-}
-.rollOut_van .wheels {
-  position: relative;
-  width: 78%;
-  left: 12%;
-  margin-top: -9%;
-  height: fit-content;
-  display: flex;
-  justify-content: space-between;
-}
-.rollOut_van .wheels img {
-  width: 15%;
-}
-.rollOut_van .wheels .wheel0 {
-  position: relative;
-  z-index: -1;
-}
-.rollOut_wheel_1 {
-  width: 8%;
-  position: relative;
-  left: 69%;
-  top: 12%;
-  z-index: 2;
-}
-.rollOut_wheel_1 img {
-  width: 100%;
-}
-.rollOut_wheel_2 {
-  width: 8%;
-  position: relative;
-  left: 19.5%;
-  top: -3.5%;
-  z-index: 0;
-}
-.rollOut_wheel_2 img {
-  width: 100%;
-}
-
 .afterContainer {
-  position: absolute;
+  position: relative;
   width: 100vw;
-  height: 100vh;
   top: 0;
   left: 0;
   display: flex;
@@ -179,4 +97,76 @@ body {
   transform: translate3d(0, 0.1em, -1em);
 }
 
-/*# sourceMappingURL=style.css.map */
+.job {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  margin-top: 3vh;
+  display: flex;
+}
+.job_description {
+  margin: 2em;
+  width: fit-content;
+  background: purple;
+}
+.job_description h1 {
+  text-transform: uppercase;
+}
+.job_description h1, .job_description h2, .job_description h3 {
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
+.job_description .intro {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25em;
+  width: fit-content;
+}
+.job_description .intro .topContainer {
+  display: flex;
+}
+.job_description .intro .topContainer .description {
+  margin-left: 3vw;
+  width: 25vw;
+}
+.job_description .intro .topContainer .description h2 {
+  width: 30vw;
+}
+.job_description .intro h4 {
+  line-height: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.job_description .intro .topMiddle {
+  margin-top: 5vh;
+}
+.job_description .intro .topMiddle .duties {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.job_description .intro .topMiddle .duties li {
+  margin-top: -0.5em;
+}
+.job_description .intro .topMiddle .duties span {
+  font-size: 2em;
+  line-height: 1em;
+}
+.job_description .intro .topMiddle .duties .dutiesSublist {
+  list-style: none;
+}
+.job_description .intro .bottom p {
+  line-height: 0.1em;
+}
+.job_description .intro .bottom .caps {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1.5em;
+}
+.job_applyField {
+  background: red;
+  margin-top: 2em;
+}
+
+/*# sourceMappingURL=apply.css.map */

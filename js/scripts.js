@@ -20,3 +20,9 @@ function startFunc() {
     // });
     console.log($(".buttons")[0].children);
 }
+
+
+
+function applySwitch() {
+    window.location.href = window.location.href + "apply.html";
+}
