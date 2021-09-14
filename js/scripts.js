@@ -23,6 +23,11 @@ function startFunc() {
 
 
 
-function applySwitch() {
-    window.location.href = window.location.href + "apply.html";
+function applySwitch(element) {
+    if (element.hostname === "127.0.0.1") {
+        console.log(element);
+        window.location.pathname = "apply.html"
+    } else if (element.hostname === "lostboysbangarang.github.io") {
+        window.location.pathname = "roadRunner/apply.html"
+    }
 }

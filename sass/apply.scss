@@ -149,6 +149,7 @@ body {
     position: relative;
     margin-top: 3vh;
     display: flex;
+    
     &_description {
         margin: 2em;
         width: fit-content;
@@ -230,12 +231,20 @@ body {
         flex-wrap: wrap;
         & input[type=text], input[type=number], input[type=tel] {
             height: 2em;
+            // outline: none;
+            
         }
         & input {
+            border: none;
+            border: 1px solid $buttonIII;
             background-color: transparent;
             &::placeholder {
                 font-size: 1.5em;
             }
+        }
+        & label {
+            // border: none;
+            border: 1px solid $buttonIII;
         }
         & .name {
             // display: flex;
@@ -266,6 +275,15 @@ body {
         }
         & .email {
             @include fillOut;
+            & input {
+                width: 50%;
+                border: 1px solid $buttonIII;
+            }
+            & label {
+                width: 100%;
+                // border: none;
+                border: 1px solid $buttonIII;
+            }
         }
         & .phone {
             border: 1px solid $buttonIII;
@@ -278,15 +296,19 @@ body {
             background-color: $darken;
             height: 1em;
             margin-bottom: .5vh;
+            justify-content: space-between;
             & label {
                 line-height: 1em;
+                width: 50%;
                 // vertical-align: center;
             }
             & input {
                 width: 50%;
                 position: relative;
-                left: 15%;
+                // left: 15%;
+                // float: right;
                 background-color: transparent;
+                height: 1.8em;
             }
         }
         & .address {
@@ -299,7 +321,13 @@ body {
             position: relative;
             background-color: $darken;
             height: 1em;
+            & label {
+                margin-bottom: 0px;
+                height: 1em;
+                line-height: 1em;
+            }
             & .wrapper {
+                // margin-top: -.1em;
                 background-color: $darken;
                 display: flex;
                 flex-direction: column;

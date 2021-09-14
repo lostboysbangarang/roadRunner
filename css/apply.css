@@ -179,10 +179,15 @@ body {
   height: 2em;
 }
 .job_applyField input {
+  border: none;
+  border: 1px solid #232f3e;
   background-color: transparent;
 }
 .job_applyField input::placeholder {
   font-size: 1.5em;
+}
+.job_applyField label {
+  border: 1px solid #232f3e;
 }
 .job_applyField .name {
   display: flex;
@@ -228,6 +233,14 @@ body {
   line-height: 1em;
   vertical-align: center;
 }
+.job_applyField .email input {
+  width: 50%;
+  border: 1px solid #232f3e;
+}
+.job_applyField .email label {
+  width: 100%;
+  border: 1px solid #232f3e;
+}
 .job_applyField .phone {
   border: 1px solid #232f3e;
   display: flex;
@@ -238,15 +251,17 @@ body {
   background-color: rgba(0, 0, 0, 0.25);
   height: 1em;
   margin-bottom: 0.5vh;
+  justify-content: space-between;
 }
 .job_applyField .phone label {
   line-height: 1em;
+  width: 50%;
 }
 .job_applyField .phone input {
   width: 50%;
   position: relative;
-  left: 15%;
   background-color: transparent;
+  height: 1.8em;
 }
 .job_applyField .address {
   border: 1px solid #232f3e;
@@ -257,6 +272,11 @@ body {
   position: relative;
   background-color: rgba(0, 0, 0, 0.25);
   height: 1em;
+}
+.job_applyField .address label {
+  margin-bottom: 0px;
+  height: 1em;
+  line-height: 1em;
 }
 .job_applyField .address .wrapper {
   background-color: rgba(0, 0, 0, 0.25);
