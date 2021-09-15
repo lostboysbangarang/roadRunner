@@ -201,7 +201,7 @@ body {
   justify-content: center;
   position: relative;
   border: 0px solid #232f3e;
-  height: 1em;
+  height: 1.5em;
   line-height: 1.5em;
   vertical-align: center;
 }
@@ -215,7 +215,56 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
-.job_applyField .answerBox input[type=text], .job_applyField .answerBox input[type=number], .job_applyField .answerBox input[type=tel] {
+.job_applyField .answerBox div .single {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.job_applyField .answerBox div .doubleDouble {
+  width: 78.9473684211%;
+  margin-bottom: 1em;
+}
+.job_applyField .answerBox div .doubleDoubleII {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.job_applyField .answerBox div .doubleDoubleII input {
+  width: 48%;
+}
+.job_applyField .answerBox div .oneQuestion {
+  color: whitesmoke;
+  width: 31.5789473684%;
+  font-size: 1.25em;
+  display: flex;
+  flex-direction: row;
+}
+.job_applyField .answerBox div .oneQuestion .container {
+  border-radius: 0px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.job_applyField .answerBox .twoButts {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 78.9473684211%;
+}
+.job_applyField .answerBox .twoButts .field {
+  width: 78.9473684211%;
+}
+.job_applyField .answerBox .twoButts .field .doubleDouble {
+  display: flex;
+  flex-direction: row;
+  color: whitesmoke;
+  border-radius: 0px;
+  width: 31.5789473684%;
+  font-size: 1.25em;
+}
+.job_applyField .answerBox input[type=text], .job_applyField .answerBox input[type=number], .job_applyField .answerBox input[type=tel], .job_applyField .answerBox input[type=email] {
   height: 2em;
 }
 .job_applyField .answerBox input {
@@ -230,9 +279,6 @@ body {
   font-size: 2em;
   color: whitesmoke;
   border: 1px solid #232f3e;
-}
-.job_applyField .answerBox .name {
-  visibility: visible;
 }
 .job_applyField .answerBox .name input {
   width: 46%;

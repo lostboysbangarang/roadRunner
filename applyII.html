@@ -74,13 +74,163 @@
         <div class="job_applyField">
             <div class="spacer"></div>
             <div class="answerBox">
-                <div class="name fields">
+                
+
+
+
+                <!-- <div class="name fields">
                     <label for="first">Tell us your name</label>
                     <div class="double">
                         <input type="text" name="first" placeholder="First" class="first">
                         <input type="text" name="last" placeholder="Last" class="last">
                     </div>
+                </div> -->
+
+
+
+
+                <div class="availability daysField">
+                    <div class="toNoAvail">
+                        <label for="fullOrPart">Availability</label>
+                        <select name="fullOrPart" class="fullpart">
+                            <option value="default" class="def">Select an option</option>
+                            <option value="Full-time" class="full">Full-time</option>
+                            <option value="Part-time" class="part">Part-time</option>
+                        </select>
+                    </div>
+                    <div class="daysOfWeek">
+                        <div class="days">
+                            <label for="mon">Monday</label>
+                            <input type="checkbox" name="mon" value="Monday">
+                        </div>
+                        <div class="days">
+                            <label for="tues">Tuesday</label>
+                            <input type="checkbox" name="tues" value="Tuesday">
+                        </div>
+                        <div class="days">
+                            <label for="wed">Wednesday</label>
+                            <input type="checkbox" name="wed" value="Wednesday">
+                        </div>
+                        <div class="days">
+                            <label for="thurs">Thursday</label>
+                            <input type="checkbox" name="thurs" value="Thursday">
+                        </div>
+                        <div class="days">
+                            <label for="fri">Friday</label>
+                            <input type="checkbox" name="fri" value="Friday">
+                        </div>
+                        <div class="days">
+                            <label for="sat">Saturday</label>
+                            <input type="checkbox" name="sat" value="Saturday">
+                        </div>
+                        <div class="days">
+                            <label for="sun">Sunday</label>
+                            <input type="checkbox" name="sun" value="Sunday">
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="wrapper">
+                            <label for="startDate">Desired Start Date</label>
+                            <input type="date" name="startDate" class="startDate">
+                        </div>
+                        
+                    </div>
+                    
                 </div>
+                <!-- <div class="felony fields">
+                    <label for="felony">Have you ever been convicted of a felony?</label>
+                    <div class="oneQuestion">
+                        <div class="container">
+                            <div>Yes:</div>
+                            <div>No:</div>
+                        </div>
+                        <div class="container">
+                            <input type="radio" name="felony" class="yes">
+                            <input type="radio" name="felony" class="no">
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="address twoFields">
+                    <label for="address fields">Home Address:</label>
+                    <div class="doubleDouble">
+                        <input type="text" name="address" placeholder="Street Address" class="addressInput">
+                        <input type="text" name="address" placeholder="Apt or Bld N°" class="aptInput">
+                        <div class="doubleDoubleII">
+                            <input type="text" name="address" placeholder="City" class="cityInput">
+                            <input type="text" name="address" placeholder="State" class="stateInput">
+                            <input type="number" name="address" placeholder="Zip Code" class="zipInput">
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="phone">
+                    <label for="number">Phone N°:</label>
+                    <div class="single">
+                        <input type="tel" name="number" placeholder="(512)555-0123" class="numberInput">
+                    </div>
+                </div> -->
+                <!-- <div class="email">
+                    <label for="email">Email:</label>
+                    <div class="single">
+                        <input type="text" name="last" placeholder="Email" class="emailInput">
+                        
+                    </div>
+                </div> -->
+                <!-- <div class="twoButts twoFields">
+                    <div class="age field">
+                        <label for="21min">Are you at least 21 years of age?</label>
+                        <div class="doubleDouble">
+                            <div class="doubleDoubleII">
+                                <div>Yes:</div>
+                                <div>No:</div>
+                            </div>
+                            <div class="doubleDoubleII">
+                                <input type="radio" name="21min" class="yes">
+                                <input type="radio" name="21min" class="no">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="drugs field">
+                        <label for="drugz">Do you submit to a drug screening?</label>
+                        <div class="doubleDouble">
+                            <div class="doubleDoubleII">
+                                <div>Yes:</div>
+                                <div>No:</div>
+                            </div>
+                            <div class="doubleDoubleII">
+                                <input type="radio" name="drugz" class="yes">
+                                <input type="radio" name="drugz" class="no">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="twoButts twoFields">
+                    <div class="workStatus field">
+                        <label for="usStat">Are you permitted to work in the U.S?</label>
+                        <div class="doubleDouble">
+                            <div class="doubleDoubleII">
+                                <div>Yes:</div>
+                                <div>No:</div>
+                            </div>
+                            <div class="doubleDoubleII">
+                                <input type="radio" name="usaWork" class="yes">
+                                <input type="radio" name="usaWork" class="no">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="english field">
+                        <label for="eng">Can you speak and read English?</label>
+                        <div class="doubleDouble">
+                            <div class="doubleDoubleII">
+                                <div>Yes:</div>
+                                <div>No:</div>
+                            </div>
+                            <div class="doubleDoubleII">
+                                <input type="radio" name="eng" class="yes">
+                                <input type="radio" name="eng" class="no">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
             </div>
             <div class="buttons">
                 <button onclick="continueApp($('.answerBox'), this)" data-step="0" class="continue">

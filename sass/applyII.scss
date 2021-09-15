@@ -220,23 +220,15 @@ body {
     }
     &_applyField {
         flex-grow: 1;
-        // height: 90vh;
         margin-bottom: 2em;
-        // margin-top: 3vh;
         margin: 2em;
-        // background-color: red;
         display: flex;
         flex-direction: column;
-        // justify-content: ;
         & .spacer {
             height: 25%;
         }
         & .answerBox {
-            // margin-top: auto;
-            // margin-top: 250px;
             width: 100% - (math.div(100%, 9.5) * 2);
-            // height: (math.div(100%, 9.5));
-            // height: 100px;
             background-color: $AzBlueI;
             margin: 0 auto;
             position: relative;
@@ -260,7 +252,7 @@ body {
                     justify-content: center;
                     position: relative;
                     border: 0px solid $buttonIII;
-                    height: 1em;
+                    height: 1.5em;
                     line-height: 1.5em;
                     vertical-align: center;
                 }
@@ -274,8 +266,66 @@ body {
                     flex-direction: row;
                     justify-content: space-around;
                 }
+                & .single {
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                }
+                & .doubleDouble {
+                    width: 100% - (math.div(100%, 9.5) * 2);
+                    &II {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        & input {
+                            width: 48%;
+                        }
+                    }
+                    margin-bottom: 1em;
+                }
+                & .oneQuestion {
+                    // border: 1px solid rosybrown;
+                    // border-radius: 0px;
+                    color: whitesmoke;
+                    width: math.div(100%, 9.5) * 3;
+                    font-size: 1.25em;
+                    display: flex;
+                    flex-direction: row;
+                    & .container {
+                        // border: 1px solid turquoise;
+                        border-radius: 0px;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+
+                    }
+                }
             }
-            & input[type=text], input[type=number], input[type=tel] {
+            & .twoButts {
+                display: flex;
+                position: relative;
+                justify-content: space-between;
+                width: 100% - (math.div(100%, 9.5) * 2);
+                // border: 1px solid khaki;
+                & .field {
+                    // background-color: red;
+                    width: 100% - (math.div(100%, 9.5) * 2);
+                    // border: 1px solid rosybrown;
+                    // border-radius: 0px;
+                    & .doubleDouble {
+                        display: flex;
+                        flex-direction: row;
+                        color: whitesmoke;
+                        // border: 1px solid yellow;
+                        border-radius: 0px;
+                        width: math.div(100%, 9.5) * 3;
+                        font-size: 1.25em;
+                    }
+                }
+            }
+            & input[type=text], input[type=number], input[type=tel], input[type=email] {
                 height: 2em;
             }
             & input {
@@ -293,7 +343,7 @@ body {
                 border: 1px solid $buttonIII;
             }
             & .name {
-                visibility: visible;
+                // visibility: visible;
                 & input {
                     width: 46%;
                 }
