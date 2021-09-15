@@ -168,10 +168,8 @@ body {
   color: whitesmoke;
   margin-top: 1em;
   margin-bottom: 1em;
-  display: flex;
   width: 48vw;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-content: flex-start;
   font-size: 1.75em;
   flex-wrap: wrap;
 }
@@ -199,6 +197,7 @@ body {
   border: 1px solid #232f3e;
   margin-bottom: 0.5vh;
   background-color: rgba(0, 0, 0, 0.25);
+  height: fit-content;
 }
 .job_applyField .name label {
   position: relative;
@@ -225,6 +224,7 @@ body {
   border: 1px solid #232f3e;
   margin-bottom: 0.5vh;
   background-color: rgba(0, 0, 0, 0.25);
+  height: fit-content;
 }
 .job_applyField .email label {
   position: relative;
@@ -234,7 +234,7 @@ body {
   vertical-align: center;
 }
 .job_applyField .email input {
-  width: 50%;
+  width: 49%;
   border: 1px solid #232f3e;
 }
 .job_applyField .email label {
@@ -270,10 +270,11 @@ body {
   width: 78.9473684211%;
   left: 10.5263157895%;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.25);
-  height: 1em;
+  height: fit-content;
+  margin-bottom: 0.5vh;
 }
 .job_applyField .address label {
+  background-color: rgba(0, 0, 0, 0.25);
   margin-bottom: 0px;
   height: 1em;
   line-height: 1em;
@@ -290,6 +291,237 @@ body {
 }
 .job_applyField .address .wrapperII input {
   width: 40%;
+}
+.job_applyField .age {
+  position: relative;
+  border: 1px solid #232f3e;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.25);
+  height: fit-content;
+  margin-bottom: 0.5vh;
+  width: 49%;
+}
+.job_applyField .age label {
+  line-height: 1em;
+  height: 1em;
+}
+.job_applyField .age .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.job_applyField .age .wrapper .container, .job_applyField .age .wrapper .containerII {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.job_applyField .age .wrapper .container div, .job_applyField .age .wrapper .containerII div {
+  display: flex;
+  justify-content: center;
+}
+.job_applyField .age .wrapper .container {
+  width: 30%;
+}
+.job_applyField .age .wrapper .containerII {
+  width: 30%;
+}
+.job_applyField .drugs {
+  position: relative;
+  border: 1px solid #232f3e;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.25);
+  height: fit-content;
+  margin-bottom: 0.5vh;
+  width: 49%;
+}
+.job_applyField .drugs label {
+  line-height: 1em;
+  height: 1em;
+}
+.job_applyField .drugs .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.job_applyField .drugs .wrapper .container, .job_applyField .drugs .wrapper .containerII {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.job_applyField .drugs .wrapper .container div, .job_applyField .drugs .wrapper .containerII div {
+  display: flex;
+  justify-content: center;
+}
+.job_applyField .drugs .wrapper .container {
+  width: 30%;
+}
+.job_applyField .drugs .wrapper .containerII {
+  width: 30%;
+}
+.job_applyField .twoButts {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 78.9473684211%;
+  left: 10.5263157895%;
+}
+.job_applyField .twoButts .english {
+  position: relative;
+  border: 1px solid #232f3e;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.25);
+  height: fit-content;
+  margin-bottom: 0.5vh;
+  width: 50%;
+  left: 1.1695906433%;
+}
+.job_applyField .twoButts .english label {
+  line-height: 1em;
+  height: 1em;
+}
+.job_applyField .twoButts .english .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.job_applyField .twoButts .english .wrapper .container, .job_applyField .twoButts .english .wrapper .containerII {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.job_applyField .twoButts .english .wrapper .container div, .job_applyField .twoButts .english .wrapper .containerII div {
+  display: flex;
+  justify-content: center;
+}
+.job_applyField .twoButts .english .wrapper .container {
+  width: 30%;
+}
+.job_applyField .twoButts .english .wrapper .containerII {
+  width: 30%;
+}
+.job_applyField .workStatus {
+  position: relative;
+  border: 1px solid #232f3e;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.25);
+  height: fit-content;
+  margin-bottom: 0.5vh;
+  width: 56%;
+  right: 1.1695906433%;
+}
+.job_applyField .workStatus label {
+  line-height: 1em;
+  height: 1em;
+}
+.job_applyField .workStatus .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.job_applyField .workStatus .wrapper .container, .job_applyField .workStatus .wrapper .containerII {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.job_applyField .workStatus .wrapper .container div, .job_applyField .workStatus .wrapper .containerII div {
+  display: flex;
+  justify-content: center;
+}
+.job_applyField .workStatus .wrapper .container {
+  width: 30%;
+}
+.job_applyField .workStatus .wrapper .containerII {
+  width: 30%;
+}
+.job_applyField .felony {
+  position: relative;
+  border: 1px solid #232f3e;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.25);
+  height: fit-content;
+  margin-bottom: 0.5vh;
+  width: 56%;
+  left: 21.0526315789%;
+}
+.job_applyField .felony label {
+  line-height: 1em;
+  height: 1em;
+}
+.job_applyField .felony .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.job_applyField .felony .wrapper .container, .job_applyField .felony .wrapper .containerII {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.job_applyField .felony .wrapper .container div, .job_applyField .felony .wrapper .containerII div {
+  display: flex;
+  justify-content: center;
+}
+.job_applyField .felony .wrapper .container {
+  width: 30%;
+}
+.job_applyField .felony .wrapper .containerII {
+  width: 30%;
+}
+.job_applyField .availability {
+  border: 1px solid #232f3e;
+  display: flex;
+  flex-direction: column;
+  width: 78.9473684211%;
+  left: 10.5263157895%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.25);
+  height: fit-content;
+  margin-bottom: 0.5vh;
+}
+.job_applyField .availability .wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.job_applyField .availability .wrapper select {
+  background-color: transparent;
+  color: whitesmoke;
+  font-size: 1em;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.job_applyField .availability .wrapper label {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+.job_applyField .availability .daysOfWeek {
+  display: flex;
+}
+.job_applyField .availability .daysOfWeek .days {
+  display: flex;
+  flex-direction: column;
+  width: 16%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #232f3e;
+}
+.job_applyField .availability .daysOfWeek .days label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.job_applyField .availability .container {
+  display: flex;
+  justify-content: center;
+}
+.job_applyField .availability .container .wrapper {
+  display: flex;
+}
+.job_applyField .availability .container .wrapper label {
+  width: fit-content;
 }
 
 /*# sourceMappingURL=apply.css.map */

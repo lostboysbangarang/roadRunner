@@ -222,10 +222,11 @@ body {
         color: whitesmoke;
         margin-top: 1em;
         margin-bottom: 1em;
-        display: flex;
+        // display: flex;
+
         width: 48vw;
-        flex-direction: column;
-        align-items: flex-start;
+        // flex-direction: column;
+        justify-content: flex-start;
         font-size: 1.75em;
         // font-weight: 100;
         flex-wrap: wrap;
@@ -263,6 +264,7 @@ body {
             //     vertical-align: center;
             // }
             @include fillOut;
+            height: fit-content;
             & .wrapper {
                 // background: blue;
                 display: flex;
@@ -275,8 +277,9 @@ body {
         }
         & .email {
             @include fillOut;
+            height: fit-content;
             & input {
-                width: 50%;
+                width: 49%;
                 border: 1px solid $buttonIII;
             }
             & label {
@@ -319,9 +322,11 @@ body {
             width: 100% - (math.div(100%, 9.5) * 2);
             left: math.div(100%, 9.5);
             position: relative;
-            background-color: $darken;
-            height: 1em;
+            // background-color: $darken;
+            height: fit-content;
+            margin-bottom: .5vh;
             & label {
+                background-color: $darken;
                 margin-bottom: 0px;
                 height: 1em;
                 line-height: 1em;
@@ -337,6 +342,258 @@ body {
                     justify-content: space-between;
                     & input {
                         width: 40%;
+                    }
+                }
+            }
+        }
+        & .age {
+            position: relative;
+            border: 1px solid $buttonIII;
+            display: flex;
+            flex-direction: column;
+            background: $darken;
+            height: fit-content;
+            margin-bottom: .5vh;
+            // width: math.div(100% - (math.div(100%, 9.5) * 2), 2);
+            width: 49%;
+            // left: math.div(100%, 9.5);
+            & label {
+                line-height: 1em;
+                height: 1em;
+            }
+            & .wrapper {
+                display: flex;
+                justify-content: space-between;
+                // flex-direction: column;
+                & .container, .containerII {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    & div {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                & .container {
+                    width: 30%;
+                }
+                & .containerII {
+                    width: 30%;
+                }
+            }
+        }
+        & .drugs {
+            position: relative;
+            border: 1px solid $buttonIII;
+            display: flex;
+            flex-direction: column;
+            background: $darken;
+            height: fit-content;
+            margin-bottom: .5vh;
+            // width: math.div(100% - (math.div(100%, 9.5) * 2), 2) - .5;
+            width: 49%;
+            // left: math.div(100%, 9.5);
+            & label {
+                line-height: 1em;
+                height: 1em;
+            }
+            & .wrapper {
+                display: flex;
+                justify-content: space-between;
+                // flex-direction: column;
+                & .container, .containerII {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    & div {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                & .container {
+                    width: 30%;
+                }
+                & .containerII {
+                    width: 30%;
+                }
+            }
+        }
+        & .twoButts {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            width: 100% - (math.div(100%, 9.5) * 2);
+            left: math.div(100%, 9.5);
+            // background-color: $buttonI;
+            & .english {
+                position: relative;
+                border: 1px solid $buttonIII;
+                display: flex;
+                flex-direction: column;
+                background: $darken;
+                height: fit-content;
+                margin-bottom: .5vh;
+                // width: math.div(100% - (math.div(100%, 9.5) * 2), 2) - .5;
+                width: 50%;
+                // background-color: red;
+                // left: math.div(100%, 9.5);
+                left: math.div(math.div(100%, 9.5), 9);
+                & label {
+                    line-height: 1em;
+                    height: 1em;
+                }
+                & .wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    // flex-direction: column;
+                    & .container, .containerII {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        & div {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                    & .container {
+                        width: 30%;
+                    }
+                    & .containerII {
+                        width: 30%;
+                    }
+                }
+            }
+
+        }
+        & .workStatus {
+            position: relative;
+            border: 1px solid $buttonIII;
+            display: flex;
+            flex-direction: column;
+            background: $darken;
+            height: fit-content;
+            margin-bottom: .5vh;
+            // width: math.div(100% - (math.div(100%, 9.5) * 2), 2) - .5;
+            width: 56%;
+            // background-color: $buttonI;
+            right: math.div(math.div(100%, 9.5), 9);
+            & label {
+                line-height: 1em;
+                height: 1em;
+            }
+            & .wrapper {
+                display: flex;
+                justify-content: space-between;
+                // flex-direction: column;
+                & .container, .containerII {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    & div {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                & .container {
+                    width: 30%;
+                }
+                & .containerII {
+                    width: 30%;
+                }
+            }
+            
+        }
+        & .felony {
+            position: relative;
+            border: 1px solid $buttonIII;
+            display: flex;
+            flex-direction: column;
+            background: $darken;
+            height: fit-content;
+            margin-bottom: .5vh;
+            // width: math.div(100% - (math.div(100%, 9.5) * 2), 2) - .5;
+            width: 56%;
+            // background-color: $buttonI;
+            left: math.div(100%, 9.5) * 2;
+            & label {
+                line-height: 1em;
+                height: 1em;
+            }
+            & .wrapper {
+                display: flex;
+                justify-content: space-between;
+                // flex-direction: column;
+                & .container, .containerII {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    & div {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                & .container {
+                    width: 30%;
+                }
+                & .containerII {
+                    width: 30%;
+                }
+            }
+        }
+        & .availability {
+            border: 1px solid $buttonIII;
+            display: flex;
+            flex-direction: column;
+            // line-height: .7em;
+            width: 100% - (math.div(100%, 9.5) * 2);
+            left: math.div(100%, 9.5);
+            position: relative;
+            background-color: $darken;
+            height: fit-content;
+            margin-bottom: .5vh;
+            & .wrapper {
+                display: flex;
+                justify-content: space-around;
+                & select {
+                    background-color: transparent;
+                    color: whitesmoke;
+                    font-size: 1em;
+                    width: 40%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+                & label {
+                    width: 40%;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            & .daysOfWeek {
+                display: flex;
+                & .days {
+                    display: flex;
+                    flex-direction: column;
+                    width: 16%;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid $buttonIII;
+                    & label {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+            & .container {
+                display: flex;
+                justify-content: center;
+                & .wrapper {
+                    display: flex;
+                    & label {
+                        width: fit-content;
+                        // margin-right: 1%;
                     }
                 }
             }

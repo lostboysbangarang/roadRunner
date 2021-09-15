@@ -28,6 +28,6 @@ function applySwitch(element) {
         console.log(element);
         window.location.pathname = "apply.html"
     } else if (element.hostname === "lostboysbangarang.github.io") {
-        window.location.pathname = "roadRunner/apply.html"
+        window.location.pathname = "/roadRunner/apply.html"
     }
 }
