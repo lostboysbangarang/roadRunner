@@ -171,7 +171,7 @@ function continueApp(element, step) {
                 info.fri = $(".daysCheck").find("input")[4].checked;
                 info.sat = $(".daysCheck").find("input")[5].checked;
                 info.sun = $(".daysCheck").find("input")[6].checked;
-                info.start = $(".startDate").find("input")[0].value;
+                info.start = $(".startDate")[0].value;
                 createElementExp(element, step, stepCount);
             }
         break;
