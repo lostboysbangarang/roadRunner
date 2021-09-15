@@ -247,6 +247,144 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
+.job_applyField .answerBox .resume {
+  color: whitesmoke;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.job_applyField .answerBox .resume span {
+  margin-top: 3vh;
+  text-align: center;
+}
+.job_applyField .answerBox .resume .buttons {
+  margin-right: 0px;
+  margin-left: 0px;
+  width: fit-content;
+}
+.job_applyField .answerBox .resume .buttons button {
+  font-size: 1em;
+}
+.job_applyField .answerBox .reference .refrences {
+  display: flex;
+  flex-direction: column;
+}
+.job_applyField .answerBox .reference .refrences input {
+  text-align: center;
+}
+.job_applyField .answerBox .reference .refrences .names {
+  display: flex;
+  flex-direction: row;
+}
+.job_applyField .answerBox .reference .refrences .names input {
+  width: 50%;
+}
+.job_applyField .answerBox .experience {
+  display: flex;
+  flex-direction: column;
+}
+.job_applyField .answerBox .experience .doubleDouble {
+  width: 36.8421052632%;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.25em;
+  color: whitesmoke;
+  margin-bottom: 1em;
+}
+.job_applyField .answerBox .experience .doubleDoubleII {
+  width: 31.5789473684%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.job_applyField .answerBox .experience .doubleDoubleII input {
+  width: 48%;
+}
+.job_applyField .answerBox .expI {
+  font-size: 0.7em;
+}
+.job_applyField .answerBox .expI .sideBySide {
+  margin-top: 1vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.job_applyField .answerBox .expI .sideBySide label {
+  display: flex;
+  text-align: center;
+  line-height: 0.7em;
+}
+.job_applyField .answerBox .expI .sideBySide input {
+  text-align: center;
+}
+.job_applyField .answerBox .availability {
+  display: flex;
+  flex-direction: column;
+  width: 89.4736842105%;
+}
+.job_applyField .answerBox .availability .toNoAvail {
+  width: 78.9473684211%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.job_applyField .answerBox .availability .toNoAvail label {
+  width: 48%;
+  display: flex;
+  justify-content: center;
+}
+.job_applyField .answerBox .availability .toNoAvail select {
+  background-color: transparent;
+  width: 48%;
+  font-size: 1.125em;
+  color: whitesmoke;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+.job_applyField .answerBox .availability .toNoAvail select .option {
+  background-color: #232f3e;
+}
+.job_applyField .answerBox .availability .toNoAvail select .option:hover, .job_applyField .answerBox .availability .toNoAvail select .option:active {
+  background-color: red;
+}
+.job_applyField .answerBox .availability .daysOfWeek {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.job_applyField .answerBox .availability .daysOfWeek .days {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 21.0526315789%;
+}
+.job_applyField .answerBox .availability .daysOfWeek .days label, .job_applyField .answerBox .availability .daysOfWeek .days input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.job_applyField .answerBox .availability .daysOfWeek .days label {
+  font-size: 1.25em;
+}
+.job_applyField .answerBox .availability .daysOfWeek .daysCheck {
+  border-radius: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.job_applyField .answerBox .availability .start input {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  color: whitesmoke;
+}
 .job_applyField .answerBox .twoButts {
   display: flex;
   position: relative;
@@ -264,15 +402,15 @@ body {
   width: 31.5789473684%;
   font-size: 1.25em;
 }
-.job_applyField .answerBox input[type=text], .job_applyField .answerBox input[type=number], .job_applyField .answerBox input[type=tel], .job_applyField .answerBox input[type=email] {
+.job_applyField .answerBox input[type=text], .job_applyField .answerBox input[type=number], .job_applyField .answerBox input[type=tel], .job_applyField .answerBox input[type=email], .job_applyField .answerBox input[type=date] {
   height: 2em;
 }
-.job_applyField .answerBox input {
+.job_applyField .answerBox input, .job_applyField .answerBox select {
   border: none;
   border: 1px solid #232f3e;
   background-color: transparent;
 }
-.job_applyField .answerBox input::placeholder {
+.job_applyField .answerBox input::placeholder, .job_applyField .answerBox select::placeholder {
   font-size: 1.5em;
 }
 .job_applyField .answerBox label {

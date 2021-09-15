@@ -78,64 +78,162 @@
 
 
 
-                <div class="name fields">
+                <!-- <div class="name fields">
                     <label for="first">Tell us your name</label>
                     <div class="double">
                         <input type="text" name="first" placeholder="First" class="first">
                         <input type="text" name="last" placeholder="Last" class="last">
                     </div>
+                </div> -->
+
+                <div class="resume twoFields">
+                    <span class="upload">
+                        Press the button to select your resume. This step is optional, but recommended
+                    </span>
+                    <div class="buttons">
+                        <button onclick="upload()" data-step="0" class="continue">
+                            Submit Resume
+                        </button>
+                        <input type="file" name="ressie" id="myRessie" class="ressie" hidden/>
+                    </div>
                 </div>
 
-
-
-
+                <!-- <div class="reference lilBigger">
+                    <div class="exposure">
+                        <label for="hearBoutUs">How did you hear about us?</label>
+                        <input type="text" name="hearBoutUs" class="hearBoutUs">
+                    </div>
+                    <div class="refrences">
+                        <label for="firstRef">Professional References:</label>
+                        <div class="names">
+                            <input type="text" name="firstRef0" placeholder="Frist" class="firstRef0">
+                            <input type="text" name="lastRef0" placeholder="Last" class="lastRef0">
+                        </div>
+                        <div class="number">
+                            <input type="tel" name="telRef0" placeholder="(512)555-0123" class="telRef0">
+                        </div>
+                        <div class="names">
+                            <input type="text" name="firstRef0" placeholder="Frist" class="firstRef0">
+                            <input type="text" name="lastRef0" placeholder="Last" class="lastRef0">
+                        </div>
+                        <div class="number">
+                            <input type="tel" name="telRef0" placeholder="(512)555-0123" class="telRef0">
+                        </div>
+                        <div class="names">
+                            <input type="text" name="firstRef0" placeholder="Frist" class="firstRef0">
+                            <input type="text" name="lastRef0" placeholder="Last" class="lastRef0">
+                        </div>
+                        <div class="number">
+                            <input type="tel" name="telRef0" placeholder="(512)555-0123" class="telRef0">
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="experience twoFields">
+                    <label for="deliveryExp">Do you have delivery experience?</label>
+                    <div class="doubleDouble">
+                        <div class="doubleDoubleII">
+                            <div>Yes:</div>
+                            <div>No:</div>
+                        </div>
+                        <div class="doubleDoubleII">
+                            <input type="radio" name="deliveryExp" class="yes">
+                            <input type="radio" name="deliveryExp" class="no">
+                        </div>
+                    </div>
+                    <label for="amazon">Have you ever worked for an Amazon DSP before?</label>
+                    <div class="doubleDouble">
+                        <div class="doubleDoubleII">
+                            <div>Yes:</div>
+                            <div>No:</div>
+                        </div>
+                        <div class="doubleDoubleII">
+                            <input type="radio" name="amazon" class="yes">
+                            <input type="radio" name="amazon" class="no">
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="expI twoFields">
+                    <div class="sideBySide">
+                        <div class="side">
+                            <label for="deliveryExpMonths">How many months experience do you have?</label>
+                            <input type="number" name="deliveryExpMonths" class="deliveryExp">
+                        </div>
+                        <div class="bySide">
+                            <label for="explainYoSelf">Please elaborate on your experience</label>
+                            <input type="text" name="explainYoSelf" class="explainYoSelf">
+                        </div>
+                    </div>
+                    <div class="sideBySide">
+                        <div class="side">
+                            <label for="company">Name of the DSP:</label>
+                            <input type="text" name="company" class="company">
+                        </div>
+                        <div class="bySide">
+                            <label for="city">Where was your DSP was located:</label>
+                            <input type="text" name="city" placeholder="City" class="city">
+                            <input type="text" name="state" placeholder="State" class="state">
+                        </div>
+                    </div>
+                </div> -->               
                 <!-- <div class="availability daysField">
                     <div class="toNoAvail">
                         <label for="fullOrPart">Availability</label>
                         <select name="fullOrPart" class="fullpart">
-                            <option value="default" class="def">Select an option</option>
-                            <option value="Full-time" class="full">Full-time</option>
-                            <option value="Part-time" class="part">Part-time</option>
+                            <option value="default" class="def option">Select an option</option>
+                            <option value="Full-time" class="full option">Full-time</option>
+                            <option value="Part-time" class="part option">Part-time</option>
                         </select>
                     </div>
                     <div class="daysOfWeek">
                         <div class="days">
                             <label for="mon">Monday</label>
-                            <input type="checkbox" name="mon" value="Monday">
+                            <div class="daysCheck">
+                                <input type="checkbox" name="mon" value="Monday">
+                            </div>
                         </div>
                         <div class="days">
                             <label for="tues">Tuesday</label>
-                            <input type="checkbox" name="tues" value="Tuesday">
+                            <div class="daysCheck">
+                                <input type="checkbox" name="tues" value="Tuesday">
+                            </div>
                         </div>
                         <div class="days">
                             <label for="wed">Wednesday</label>
-                            <input type="checkbox" name="wed" value="Wednesday">
+                            <div class="daysCheck">
+                                <input type="checkbox" name="wed" value="Wednesday">
+                            </div>
                         </div>
                         <div class="days">
                             <label for="thurs">Thursday</label>
-                            <input type="checkbox" name="thurs" value="Thursday">
+                            <div class="daysCheck">
+                                <input type="checkbox" name="thurs" value="Thursday">
+                            </div>
                         </div>
                         <div class="days">
                             <label for="fri">Friday</label>
-                            <input type="checkbox" name="fri" value="Friday">
+                            <div class="daysCheck">
+                                <input type="checkbox" name="fri" value="Friday">
+                            </div>
                         </div>
                         <div class="days">
                             <label for="sat">Saturday</label>
-                            <input type="checkbox" name="sat" value="Saturday">
+                            <div class="daysCheck">
+                                <input type="checkbox" name="sat" value="Saturday">
+                            </div>
                         </div>
                         <div class="days">
                             <label for="sun">Sunday</label>
-                            <input type="checkbox" name="sun" value="Sunday">
+                            <div class="daysCheck">
+                                <input type="checkbox" name="sun" value="Sunday">
+                            </div>
                         </div>
                     </div>
-                    <div class="container">
+                    <div class="start">
                         <div class="wrapper">
                             <label for="startDate">Desired Start Date</label>
                             <input type="date" name="startDate" class="startDate">
                         </div>
-                        
                     </div>
-                    
                 </div> -->
                 <!-- <div class="felony fields">
                     <label for="felony">Have you ever been convicted of a felony?</label>

@@ -7,6 +7,9 @@ $buttonIII: #232f3e;
 $buttonIV: #91641F;
 $buttonV: #ff3860;
 $darken: rgba(0, 0, 0, .15);
+
+
+
 @use "sass:math";
 @font-face {
     font-family: 'doves';
@@ -21,14 +24,15 @@ $darken: rgba(0, 0, 0, .15);
 
 }
 
+$ninth: math.div(100%, 9.5);
 
 @mixin fillOut {
     display: flex;
     flex-direction: column;
     line-height: .7em;
-    width: 100% - (math.div(100%, 9.5) * 2);
+    width: 100% - ($ninth * 2);
     position: relative;
-    left: math.div(100%, 9.5);
+    left: $ninth;
     border: 1px solid $buttonIII;
     margin-bottom: .5vh;
     background-color: $darken;
@@ -228,7 +232,7 @@ body {
             height: 25%;
         }
         & .answerBox {
-            width: 100% - (math.div(100%, 9.5) * 2);
+            width: 100% - ($ninth * 2);
             background-color: $AzBlueI;
             margin: 0 auto;
             position: relative;
@@ -239,7 +243,7 @@ body {
             & div {
                 position: relative;
                 margin: auto auto;
-                width: 100% - (math.div(100%, 9.5) * 2);
+                width: 100% - ($ninth * 2);
                 border-radius: 1vw;
                 border: .5em solid $buttonIV;
                 display: flex;
@@ -271,7 +275,7 @@ body {
                     margin-bottom: 1em;
                 }
                 & .doubleDouble {
-                    width: 100% - (math.div(100%, 9.5) * 2);
+                    width: 100% - ($ninth * 2);
                     &II {
                         width: 100%;
                         display: flex;
@@ -288,7 +292,7 @@ body {
                     // border: 1px solid rosybrown;
                     // border-radius: 0px;
                     color: whitesmoke;
-                    width: math.div(100%, 9.5) * 3;
+                    width: $ninth * 3;
                     font-size: 1.25em;
                     display: flex;
                     flex-direction: row;
@@ -303,15 +307,168 @@ body {
                     }
                 }
             }
+            & .resume {
+                color: whitesmoke;
+                font-size: 1.5em;
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                align-items: center;
+                // justify-content: space-between;
+                & span {
+                    margin-top: 3vh;
+                    text-align: center;
+                }
+                & .buttons {
+                    // margin-left: auto;
+                    margin-right: 0px;
+                    margin-left: 0px;
+                    width: fit-content;
+                    & button {
+                        font-size: 1em;
+                    }
+                }
+            }
+            & .reference {
+                & .refrences {
+                    display: flex;
+                    flex-direction: column;
+                    & input {
+                        text-align: center;
+                    }
+                    & .names {
+                        display: flex;
+                        flex-direction: row;
+                        & input {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+            & .experience {
+                display: flex;
+                flex-direction: column;
+                & .doubleDouble {
+                    width: $ninth * 3.5;
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 1.25em;
+                    color: whitesmoke;
+                    &II {
+                        width: $ninth * 3;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        & input {
+                            width: 48%;
+                        }
+                    }
+                    margin-bottom: 1em;
+                }
+            }
+            & .expI {
+                font-size: .7em;
+                & .sideBySide {
+                    margin-top: 1vh;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    & label {
+                        display: flex;
+                        text-align: center;
+                        line-height: .7em;
+                    }
+                    & input {
+                        text-align: center;
+                    }
+                }
+            }
+            & .availability {
+                display: flex;
+                flex-direction: column;
+                width: 100% - $ninth;
+                & .toNoAvail {
+                    width: 100% - ($ninth * 2);
+                    // border: 1px solid turquoise;
+                    // border-radius: 0px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    & label {
+                        width: 48%;
+                        display: flex;
+                        justify-content: center;
+                        // border: 1px solid khaki;
+                        // margin: 0;
+                    }
+                    & select {
+                        background-color: transparent;
+                        width: 48%;
+                        font-size: 1.125em;
+                        color: whitesmoke;
+                        text-align: center;
+                        position: relative;
+                        display: inline-block;
+                        & .option {
+                            background-color: $buttonIII;
+                        }
+                        & .option:hover, .option:active {
+                            background-color: red;
+                        }
+                    }
+                }
+                & .daysOfWeek {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    & .days {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        // border: 1px solid khaki;
+                        // border-radius: 0px;
+                        width: $ninth * 2;
+                        & label, input {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            // border: 1px solid turquoise;
+                        }
+                        & label {
+                            font-size: 1.25em;
+                        }
+                        &Check {
+                            // border: 1px solid red;
+                            border-radius: 0px;
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                        }
+                    }
+                }
+                & .start {
+                    & input {
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        font-size: 1.5em;
+                        color: whitesmoke;
+                    }
+                }
+            }
             & .twoButts {
                 display: flex;
                 position: relative;
                 justify-content: space-between;
-                width: 100% - (math.div(100%, 9.5) * 2);
+                width: 100% - ($ninth * 2);
                 // border: 1px solid khaki;
                 & .field {
                     // background-color: red;
-                    width: 100% - (math.div(100%, 9.5) * 2);
+                    width: 100% - ($ninth * 2);
                     // border: 1px solid rosybrown;
                     // border-radius: 0px;
                     & .doubleDouble {
@@ -320,15 +477,15 @@ body {
                         color: whitesmoke;
                         // border: 1px solid yellow;
                         border-radius: 0px;
-                        width: math.div(100%, 9.5) * 3;
+                        width: $ninth * 3;
                         font-size: 1.25em;
                     }
                 }
             }
-            & input[type=text], input[type=number], input[type=tel], input[type=email] {
+            & input[type=text], input[type=number], input[type=tel], input[type=email], input[type=date] {
                 height: 2em;
             }
-            & input {
+            & input, select {
                 border: none;
                 border: 1px solid $buttonIII;
                 background-color: transparent;
