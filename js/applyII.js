@@ -10,7 +10,7 @@ var $exp    =   $('<div class="experience twoFields"><label for="deliveryExp">Do
 var $expI   =   $('<div class="expI twoFields"><div class="sideBySide"><div class="side"><label for="deliveryExpMonths">How many months experience do you have?</label><input type="number" name="deliveryExpMonths" class="deliveryExp"></div><div class="bySide"><label for="explainYoSelf">Please elaborate on your experience</label><input type="text" name="explainYoSelf" class="explainYoSelf"></div></div><div class="sideBySide"><div class="side"><label for="company">Name of the DSP:</label><input type="text" name="company" class="company"></div><div class="bySide"><label for="city">Where was your DSP was located:</label><input type="text" name="city" placeholder="City" class="city"><input type="text" name="state" placeholder="State" class="state"></div></div></div>');
 var $expII  =   $('<div class="expI twoFields"><div class="sideBySide"><div class="side"><label for="deliveryExpMonths">How many months experience do you have?</label><input type="number" name="deliveryExpMonths" class="deliveryExp"></div><div class="bySide"><label for="explainYoSelf">Please elaborate on your experience</label><input type="text" name="explainYoSelf" class="explainYoSelf"></div></div></div>');
 var $expIII =   $('<div class="expI twoFields"><div class="sideBySide"><div class="side"><label for="company">Name of the DSP:</label><input type="text" name="company" class="company"></div><div class="bySide"><label for="city">Where was your DSP was located:</label><input type="text" name="city" placeholder="City" class="city"><input type="text" name="state" placeholder="State" class="state"></div></div></div>');
-var $refs   =   $('<div class="reference lilBigger"><div class="exposure"><label for="hearBoutUs">How did you hear about us?</label><input type="text" name="hearBoutUs" class="hearBoutUs"></div><div class="refrences"><label for="firstRef">Professional References:</label><div class="names"><input type="text" name="firstRef0" placeholder="Frist" class="firstRef0"><input type="text" name="lastRef0" placeholder="Last" class="lastRef0"></div><div class="number"><input type="tel" name="telRef0" placeholder="(512)555-0123" class="telRef0"></div><div class="names"><input type="text" name="firstRef0" placeholder="Frist" class="firstRef0"><input type="text" name="lastRef0" placeholder="Last" class="lastRef0"></div><div class="number"><input type="tel" name="telRef0" placeholder="(512)555-0123" class="telRef0"></div><div class="names"><input type="text" name="firstRef0" placeholder="Frist" class="firstRef0"><input type="text" name="lastRef0" placeholder="Last" class="lastRef0"></div><div class="number"><input type="tel" name="telRef0" placeholder="(512)555-0123" class="telRef0"></div></div></div>');
+var $refs   =   $('<div class="reference lilBigger"><div class="exposure"><label for="hearBoutUs">How did you hear about us?</label><input type="text" name="hearBoutUs" class="hearBoutUs"></div><div class="refrences"><label for="firstRef">Professional References:</label><div class="names"><input type="text" name="first" placeholder="Frist" class="first"><input type="text" name="last" placeholder="Last" class="last"></div><div class="number"><input type="tel" name="tel" placeholder="(512)555-0123" class="tel"></div><div class="names"><input type="text" name="first" placeholder="Frist" class="first"><input type="text" name="last" placeholder="Last" class="last"></div><div class="number"><input type="tel" name="tel" placeholder="(512)555-0123" class="tel"></div><div class="names"><input type="text" name="first" placeholder="Frist" class="first"><input type="text" name="last" placeholder="Last" class="last"></div><div class="number"><input type="tel" name="tel" placeholder="(512)555-0123" class="tel"></div></div></div>');
 var $ressie =   $('<div class="resume twoFields"><span class="upload">Press the button to select your resume. This step is optional, but recommended</span><div class="buttons"><button onclick="upload()" data-step="0" class="continue">Submit Resume</button><input type="file" name="ressie" id="myRessie" class="ressie" hidden/></div></div>');
 
 var info = {
@@ -200,30 +200,65 @@ function continueApp(element, step) {
             if (elePhun.length === 2) {
                 if (elePhun[0] === "" && elePhun[1] === "") {
                     alert("Please fill in all fields");
+                } else {
+                    $exp = $(".expI");
+                    if (elePhun.length === 2) {
+                        info.monthExp = elePhun[0].value;
+                        info.elaFun = elePhun[1].value;
+                    } else if (elePhun.length === 3) {
+                        info.amazDSP = elePhun[0].value;
+                        info.cityDSP = elePhun[1].value;
+                        info.stateDSP = elePhun[2].value;
+                    } else if (elePhun.length === 5) {
+                        info.monthExp = elePhun[0].value;
+                        info.elaFun = elePhun[1].value;
+                        info.amazDSP = elePhun[2].value;
+                        info.cityDSP = elePhun[3].value;
+                        info.stateDSP = elePhun[4].value;
+                    }
+                    createElementRefs(element, step, stepCount);
                 }
             } else if (elePhun.length === 3) {
                 if (elePhun[0] === "" && elePhun[1] === "" && elePhun[2] === "") {
                     alert("Please fill in all fields");
+                } else {
+                    $exp = $(".expI");
+                    if (elePhun.length === 2) {
+                        info.monthExp = elePhun[0].value;
+                        info.elaFun = elePhun[1].value;
+                    } else if (elePhun.length === 3) {
+                        info.amazDSP = elePhun[0].value;
+                        info.cityDSP = elePhun[1].value;
+                        info.stateDSP = elePhun[2].value;
+                    } else if (elePhun.length === 5) {
+                        info.monthExp = elePhun[0].value;
+                        info.elaFun = elePhun[1].value;
+                        info.amazDSP = elePhun[2].value;
+                        info.cityDSP = elePhun[3].value;
+                        info.stateDSP = elePhun[4].value;
+                    }
+                    createElementRefs(element, step, stepCount);
                 }
             } else if (elePhun.length === 5) {
                 if (elePhun[0] === "" && elePhun[1] === "" && elePhun[2] === "" && elePhun[3] === "" && elePhun[4] === "") {
                     alert("Please fill in all fields");
-                }
-            } else {
-                $exp = $(".expI");
-                if (elePhun.length === 2) {
-                    info.monthExp = elePhun[0].value;
-                    info.elaFun = elePhun[1].value;
-                } else if (elePhun.length === 3) {
-                    info.amazDSP = elePhun[0].value;
-                    info.cityDSP = elePhun[1].value;
-                    info.stateDSP = elePhun[2].value;
-                } else if (elePhun.length === 5) {
-                    info.monthExp = elePhun[0].value;
-                    info.elaFun = elePhun[1].value;
-                    info.amazDSP = elePhun[2].value;
-                    info.cityDSP = elePhun[3].value;
-                    info.stateDSP = elePhun[4].value;
+                } else {
+                    $exp = $(".expI");
+                    if (elePhun.length === 2) {
+                        info.monthExp = elePhun[0].value;
+                        info.elaFun = elePhun[1].value;
+                    } else if (elePhun.length === 3) {
+                        info.amazDSP = elePhun[0].value;
+                        info.cityDSP = elePhun[1].value;
+                        info.stateDSP = elePhun[2].value;
+                    } else if (elePhun.length === 5) {
+                        info.monthExp = elePhun[0].value;
+                        info.elaFun = elePhun[1].value;
+                        info.amazDSP = elePhun[2].value;
+                        info.cityDSP = elePhun[3].value;
+                        info.stateDSP = elePhun[4].value;
+                    }
+                    createElementRefs(element, step, stepCount);
                 }
             }
         break;
@@ -292,6 +327,11 @@ function createElementExpIII(element, step, stepCount) {
 }
 function createElementResume(element, step, stepCount) {
     lipFiller(element, step, stepCount, $ressie);
+    $(".answerBox").children(".twoFields").css("height", ($(".answerBox").children(".twoFields").width() / 16) *6);
+}
+function createElementRefs(element, step, stepCount) {
+    console.log("Help");
+    lipFiller(element, step, stepCount, $refs);
 }
 
 
