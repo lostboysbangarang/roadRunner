@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now</title>
+    <link rel="stylesheet" href="./css/applyII.css">
+</head>
+<body>
+    <div class="afterContainer">
+        <header class="header">
+            <div class="logo">
+                <img onclick="backHome(window.location)" src="./resources/logo.webp" alt="">
+            </div>
+            <nav class="buttons">
+                <button class="butt applyNow" onclick="location.pathname='apply.html'">Apply Now</button>
+                <button class="butt activities">Community Activites</button>
+                <button class="butt socials">Social Media</button>
+                <button class="butt contact">Contact Us</button>
+            </nav>   
+        </header>
+    </div>
+    <div class="job">
+        <section class="job_description">
+            <div class="intro">
+                <div class="topContainer">
+                    <header>
+                        <h1>delivery associate</h1>
+                        <article class="details">
+                            <h2>Austin, TX 78728</h2>
+                            <h2>Full-time/Part-time</h2>
+                            <h2>Salery: $17.25/hour</h2>
+                        </article>
+                    </header>
+                    <section class="description">
+                        &emsp;Road Runner Enterpirses, LLC is an Amazon Delivery Service Partner looking for enthusiastic, team players
+                        to deliver Amazon packages. Delivery Associates strive to get every Amazon order to the customer's door on-time
+                        . We offer full and part time opportunities                    
+                    </section>
+                </div>
+                <div class="topMiddle">
+                    <h3>Company Vehicle Provied! No CDL Required</h3>
+                    Approximate hours are 9am to 8pm. Routes are 10 hours per day and shifts are available 7 days per week
+                    <h4>duties and responsibilities</h4>
+                    <ul class="duties">
+                        <li><span>&#183;</span>&emsp;&emsp;Safely drive and operate your delivery vehicle at all times.</li>
+                        <li><span>&#183;</span>&emsp;&emsp;Use hand held device for routing information, customer delivery information.</li>
+                        <li><span>&#183;</span>&emsp;&emsp;Navigate a veriety of routes throughout the delivery area.</li>
+                        <li><span>&#183;</span>&emsp;&emsp;Must be comfortable driving and working in varying weather conditions.</li>
+                        <li><span>&#183;</span>&emsp;&emsp;Load and unload packages to be delivered.</li>
+                        <li><span>&#183;</span>&emsp;&emsp;Be CUSTOMER OBSESSED!! We strive to deliver packages and smiles to our customers.</li>
+                        <li>
+                            <span>&#183;</span>&emsp;&emsp;Perform the following tasks, with or without reasonable accodation.
+                            <ul class="dutiesSublist">
+                                <li><span>&#183;</span>&emsp;&emsp;Lift packages up to 50 lbs.</li>
+                                <li><span>&#183;</span>&emsp;&emsp;Be able to get in and out of van and walk up and down stairs thought your shift.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <section class="bottom">
+                    <h4>requiremets</h4>
+                    <article class="requirements">
+                        <p>Eligible to work in the U.S.</p>
+                        <p>At least 21 years of age</p>
+                        <p>consent to a drug screening</p>
+                        <p class="caps">immedate openings available!!!</p>
+                    </article>
+                </section>
+                
+            </div>
+        </section>
+        <div class="job_applyField">
+            <div class="spacer"></div>
+            <div class="answerBox">
+                <div class="name fields">
+                    <label for="first">Tell us your name</label>
+                    <div class="double">
+                        <input type="text" name="first" placeholder="First" class="first">
+                        <input type="text" name="last" placeholder="Last" class="last">
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="continueApp($('.answerBox'), this)" data-step="0" class="continue">
+                    Continue Application
+                </button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <script src="./js/applyII.js"></script>
+<script
+    src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+    integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+    crossorigin="anonymous"></script>
+</html>

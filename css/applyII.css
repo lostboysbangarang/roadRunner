@@ -1,0 +1,293 @@
+@font-face {
+  font-family: "doves";
+  src: url("../css/fonts/doves_type_2.0-webfont.eot");
+  src: url("../css/fonts/doves_type_2.0-webfont.eot?#iefix") format("embedded-opentype"), url("../css/fonts/doves_type_2.0-webfont.woff2") format("woff2"), url("../css/fonts/doves_type_2.0-webfont.woff") format("woff"), url("../css/fonts/doves_type_2.0-webfont.ttf") format("truetype"), url("../css/fonts/doves_type_2.0-webfont.svg#doves_typeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "doves";
+}
+
+body {
+  background-color: #146eb4;
+  overflow-x: hidden;
+  position: absolute;
+  font-family: "doves";
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.afterContainer {
+  position: relative;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.afterContainer .header {
+  position: relative;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.afterContainer .header .logo {
+  height: 100%;
+  margin-left: 2vw;
+}
+.afterContainer .header .logo img {
+  height: 100%;
+}
+.afterContainer .header .buttons {
+  margin-right: 2vw;
+}
+.afterContainer .header .buttons button {
+  font-size: 1.5em;
+  width: fit-content;
+  padding: 0.25em 1em;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  background: #ff9900;
+  color: whitesmoke;
+  vertical-align: middle;
+  text-decoration: none;
+  border-radius: 0.5em;
+}
+.afterContainer .header .buttons button.butt {
+  line-height: 1.5;
+  border: 2px solid #91641F;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+.afterContainer .header .buttons button.butt::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #91641F;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #91641F, 0 0.4em 0 0 #232f3e;
+  transform: translate3d(0, 0.4em, -1em);
+}
+.afterContainer .header .buttons button.butt:hover {
+  transform: translate(0em, 0.25em);
+}
+.afterContainer .header .buttons button.butt:hover::before {
+  box-shadow: 0 0 0 2px #91641F, 0 0.4em 0 0 #232f3e;
+  transform: translate3d(0, 0.25em, -2em);
+}
+.afterContainer .header .buttons button.butt:active {
+  transform: translate(0em, 0.75em);
+}
+.afterContainer .header .buttons button.butt:active::before {
+  box-shadow: 0 0 0 2px #91641F, 0 0.25em 0 0 #232f3e;
+  transform: translate3d(0, 0.1em, -1em);
+}
+
+.job {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  margin-top: 3vh;
+  display: flex;
+}
+.job_description {
+  margin: 2em 0 2em 2em;
+  width: fit-content;
+  background: purple;
+}
+.job_description h1 {
+  text-transform: uppercase;
+}
+.job_description h1, .job_description h2, .job_description h3 {
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
+.job_description .intro {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25em;
+  width: fit-content;
+}
+.job_description .intro .topContainer {
+  display: flex;
+}
+.job_description .intro .topContainer .description {
+  margin-left: 3vw;
+  width: 25vw;
+}
+.job_description .intro .topContainer .description h2 {
+  width: 30vw;
+}
+.job_description .intro h4 {
+  line-height: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.job_description .intro .topMiddle {
+  margin-top: 5vh;
+}
+.job_description .intro .topMiddle .duties {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.job_description .intro .topMiddle .duties li {
+  margin-top: -0.5em;
+}
+.job_description .intro .topMiddle .duties span {
+  font-size: 2em;
+  line-height: 1em;
+}
+.job_description .intro .topMiddle .duties .dutiesSublist {
+  list-style: none;
+}
+.job_description .intro .bottom p {
+  line-height: 0.1em;
+}
+.job_description .intro .bottom .caps {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 1.5em;
+}
+.job_applyField {
+  flex-grow: 1;
+  margin-bottom: 2em;
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.job_applyField .spacer {
+  height: 25%;
+}
+.job_applyField .answerBox {
+  width: 78.9473684211%;
+  background-color: #0066c1;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 2vw;
+  border: 1em solid #ff9900;
+  display: flex;
+  flex-direction: column;
+}
+.job_applyField .answerBox div {
+  position: relative;
+  margin: auto auto;
+  width: 78.9473684211%;
+  border-radius: 1vw;
+  border: 0.5em solid #91641F;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.15);
+  flex-direction: column;
+}
+.job_applyField .answerBox div label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border: 0px solid #232f3e;
+  height: 1em;
+  line-height: 1.5em;
+  vertical-align: center;
+}
+.job_applyField .answerBox div div {
+  border: none;
+  background-color: transparent;
+}
+.job_applyField .answerBox div .double {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.job_applyField .answerBox input[type=text], .job_applyField .answerBox input[type=number], .job_applyField .answerBox input[type=tel] {
+  height: 2em;
+}
+.job_applyField .answerBox input {
+  border: none;
+  border: 1px solid #232f3e;
+  background-color: transparent;
+}
+.job_applyField .answerBox input::placeholder {
+  font-size: 1.5em;
+}
+.job_applyField .answerBox label {
+  font-size: 2em;
+  color: whitesmoke;
+  border: 1px solid #232f3e;
+}
+.job_applyField .answerBox .name {
+  visibility: visible;
+}
+.job_applyField .answerBox .name input {
+  width: 46%;
+}
+.job_applyField .buttons {
+  margin: 1vh auto 0 auto;
+}
+.job_applyField .buttons button {
+  font-size: 1.5em;
+  width: fit-content;
+  padding: 0.25em 1em;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  background: #ff9900;
+  color: whitesmoke;
+  vertical-align: middle;
+  text-decoration: none;
+  border-radius: 0.5em;
+}
+.job_applyField .buttons button.continue {
+  line-height: 1.5;
+  border: 2px solid #91641F;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+.job_applyField .buttons button.continue::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #91641F;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #91641F, 0 0.4em 0 0 #232f3e;
+  transform: translate3d(0, 0.4em, -1em);
+}
+.job_applyField .buttons button.continue:hover {
+  transform: translate(0em, 0.25em);
+}
+.job_applyField .buttons button.continue:hover::before {
+  box-shadow: 0 0 0 2px #91641F, 0 0.4em 0 0 #232f3e;
+  transform: translate3d(0, 0.25em, -2em);
+}
+.job_applyField .buttons button.continue:active {
+  transform: translate(0em, 0.75em);
+}
+.job_applyField .buttons button.continue:active::before {
+  box-shadow: 0 0 0 2px #91641F, 0 0.25em 0 0 #232f3e;
+  transform: translate3d(0, 0.1em, -1em);
+}
+
+/*# sourceMappingURL=applyII.css.map */
