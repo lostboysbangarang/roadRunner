@@ -373,12 +373,12 @@ body {
   background: rgba(0, 0, 0, 0.25);
   height: fit-content;
   margin-bottom: 0.5vh;
-  width: 50%;
-  left: 1.1695906433%;
+  width: 49%;
 }
 .job_applyField .twoButts .english label {
   line-height: 1em;
   height: 1em;
+  font-size: 0.75em;
 }
 .job_applyField .twoButts .english .wrapper {
   display: flex;
@@ -407,12 +407,12 @@ body {
   background: rgba(0, 0, 0, 0.25);
   height: fit-content;
   margin-bottom: 0.5vh;
-  width: 56%;
-  right: 1.1695906433%;
+  width: 49%;
 }
 .job_applyField .workStatus label {
   line-height: 1em;
   height: 1em;
+  font-size: 0.75em;
 }
 .job_applyField .workStatus .wrapper {
   display: flex;

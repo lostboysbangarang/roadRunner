@@ -434,13 +434,15 @@ body {
                 height: fit-content;
                 margin-bottom: .5vh;
                 // width: math.div(100% - (math.div(100%, 9.5) * 2), 2) - .5;
-                width: 50%;
+                width: 49%;
+                
                 // background-color: red;
                 // left: math.div(100%, 9.5);
-                left: math.div(math.div(100%, 9.5), 9);
+                // left: math.div(math.div(100%, 9.5), 9);
                 & label {
                     line-height: 1em;
                     height: 1em;
+                    font-size: .75em;
                 }
                 & .wrapper {
                     display: flex;
@@ -474,12 +476,13 @@ body {
             height: fit-content;
             margin-bottom: .5vh;
             // width: math.div(100% - (math.div(100%, 9.5) * 2), 2) - .5;
-            width: 56%;
+            width: 49%;
             // background-color: $buttonI;
-            right: math.div(math.div(100%, 9.5), 9);
+            // right: math.div(math.div(100%, 9.5), 9);
             & label {
                 line-height: 1em;
                 height: 1em;
+                font-size: .75em;
             }
             & .wrapper {
                 display: flex;
